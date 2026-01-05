@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parames Siripathanon | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 15px 0;
+      color: #a8dadc;
+    }
+    header p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1rem;
+      color: #e0e0e0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 30px;
+      background: #a8dadc;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #f1faee; }
+    section {
+      padding: 80px 10%;
+      background: #f8f9fa;
+      color: #222;
+    }
+    section h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    section h3::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #2c5364;
+      display: block;
+      margin: 15px auto 0;
+    }
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card h4 { margin-bottom: 15px; color: #2c5364; }
+    footer {
+      background: #0f2027;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer a {
+      color: #a8dadc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #a8dadc;
+    }
+
+    nav {
+    background: #0f2027;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    }
+    .education {
+  max-width: 900px;
+  margin: auto;
+}
+
+.edu-item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.edu-item h4 {
+  color: #2c5364;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.edu-item span {
+  font-size: 0.95rem;
+  color: #666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edu-item p {
+  font-size: 1rem;
+}
+.achievements {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.achieve-item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.achieve-item::before {
+  content: "★";
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 2.5rem;
+  color: #a8dadc;
+}
+
+.achieve-item h4 {
+  color: #2c5364;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.achieve-item span {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.achieve-item p {
+  font-size: 1rem;
+}
+
+.achievements {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.achieve-item {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.achieve-item:hover {
+  transform: translateY(-8px);
+}
+
+.achieve-item img {
+  width: 150px 750px;
+  height: 285px;
+  object-fit: cover;
+}
+
+.achieve-content {
+  padding: 25px;
+}
+
+.achieve-content h4 {
+  color: #2c5364;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.achieve-content span {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.achieve-content p {
+  font-size: 1rem;
+}
+
+  </style>
+</head>
+<body>
+
+<nav>
+<div style="color:#a8dadc;font-weight:600;">Parames Siripathanon</div>
+<div>
+<a href="#home">Home</a>
+<a href="#education">Education</a>
+<a href="#skill">Skills</a>
+<a href="#project">project</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<header>
+  <div>
+      <img src="images/prooooo.jpg" alt="Profile Photo">
+    <h1>Parames Siripathanon</h1>
+    <h2>Data Science & Machine Learning</h2>
+    <p>
+      ผมสนใจด้านการวิเคราะห์ข้อมูล การสร้างแบบจำลองเชิงสถิติ และการประยุกต์ใช้ Machine Learning
+      เพื่อสนับสนุนการตัดสินใจเชิงกลยุทธ์
+    </p>
+    <a href="#about" class="btn">About Me</a>
+  </div>
+</header>
+
+<section id="about">
+  <h3>About Me</h3>
+  <div class="about">
+    <p>
+      ผมนายปารเมศ ศิริพรรธนนท์ อายุ 23 ปี มีความสนใจด้าน Data Science, Machine Learning และการพัฒนาแบบจำลองเชิงพยากรณ์
+      มีประสบการณ์ในการทำโปรเจ็คกับ Python, Machine Learning, Deep learning และ Flask 
+    </p>
+  </div>
+</section>
+
+<section id="education">
+  <h3>Education</h3>
+
+  <div class="education">
+    <div class="edu-item">
+      <h4>ระมัธยมศึกษาตอนต้น</h4>
+      <span>โรงเรียนหนองบัวพิทยาคาร | พ.ศ. 2557 – 2560</span>
+      <p>
+        สนในด้านคณิตศาสตร์และการเขียนโปรแกรม
+      </p>
+    </div>
+
+    <div class="edu-item">
+      <h4>ระมัธยมศึกษาตอนปลาย</h4>
+      <span>โรงเรียนหนองบัวพิทยาคาร | พ.ศ. 2561 – 2563</span>
+      <p>
+        สนใจด้านสถิติ การวิเคราะห์ข้อมูล และการเขียนโปรแกรม
+      </p>
+    </div>
+
+        <div class="edu-item">
+      <h4>ระดับปริญญาตรี</h4>
+      <span>มหาวิทยาลัยขอนแก่น คณะวิทยาศาสตร์ | สาขาสถิติ | พ.ศ. 2564 – 2568</span>
+      <p>
+        โครงการ : การวิเคราะห์การถดถอยพหุผลลัพธ์ในการทำนายความถี่และความรุนแรงของการเรียกร้องค่าสินไหมทดแทนในการประกันภัยรถยนต์
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section id="skill">
+  <h3>Skills</h3>
+  <div class="skills">
+    <div class="card">
+      <h4>Programming</h4>
+      <p>Excel, Python, SQL, PowerBI, HTML, CSS</p>
+    </div>
+    <div class="card">
+      <h4>Machine Learning</h4>
+      <p>LightGBM, XGBoost, Random Forest, MLP</p>
+    </div>
+    <div class="card">
+      <h4>Deployment</h4>
+      <p>Flask</p>
+    </div>
+    
+  </div>
+</section>
+
+<section id="project">
+  <h3>Projects</h3>
+  <div class="projects">
+    <div class="card">
+      <h4>การวิเคราะห์การถดถอยพหุผลลัพย์ในการทำนายความถี่และความรุนแรงของการเรียกร้องค่าสินไหมทดแทนในการประกันภัยรถยนต์</h4>
+      <p>ใช้ Multi-output regression สำหรับทำนายความถี่(จำนวน)และความรุนแรง(มูลค่า)ของการเรียกร้องค่าสินไหมทดแทนโดยการสร้างแบบจำลองการทำนายมาทั้งหมด 4 แบบ จำลอง ประกอบไปด้วย Random Forest, XGBoost, LightGBM, Multi-layer percepton
+        และนำแบบจำลองการทำนายมาเปรียบเทียบเพื่อหาแบบจำลองที่ดีที่สุดและนำแบบจำลองที่ดีที่สุดไปสร้าง SHAP เพื่อหาตัวแปรที่มีอิทธิพลต่อการทำนายหลังจากนั้นเอาไปทำ Wep Application
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="achievements">
+  <h3>Achievements</h3>
+
+  <div class="achievements">
+
+    <div class="achieve-item">
+      <img src="images/cert1.png" alt="Graduation Project">
+      <div class="achieve-content">
+        <h4>การประชุมวิชาการคณะวิทยาศาสตร์ ครั้งที่ 27</h4>
+        <span>สาขาสถิติ มหาวิทยาลัยขอนแก่น | 2568</span>
+        <p>
+          ได้รับรางวัลรองชนะเลิศอันดับที่ 1 การบรรยาย ในการประชุมวิชาการคณะวิทยาศาสตร์ ครั้งที่ 27 ปี 2567 โดยใช้เทคนิคการวิเคราะห์ข้อมูลด้วย Python และ Machine Learning
+        </p>
+      </div>
+    </div>
+
+    <div class="achieve-item">
+      <img src="images/cert2.jpeg" alt="Machine Learning Project">
+      <div class="achieve-content">
+        <h4>ประชุมวิชาการระดับปริญญาตรี ด้านคณิตศาสตร์ประยุกต์ ครั้งที่ 13</h4>
+        <span>ภาควิชาคณิตาศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง | 2568</span>
+        <p>
+          ได้รับรางวัลระดับเหรียญเงิน ในการประชุมวิชาการระดับปริญญาตรี ด้านคณิตศาสตร์ประยุกต์ ครั้งที่ 13
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer>
+  <p id="contact">Contact</p>
+  <p>
+    <a href="#">196/6 ต.โนนสัง อ.โนนสัง จ.หนองบัวลำภู</a> |
+    <a href="#">0617419875</a> |
+    <a href="#parames.sirpat@gmail.com">parames.sirpat@gmail.com</a>
+  </p>
+  <p style="margin-top:15px; font-size:0.9rem;">© 2026 Parames Siripathanon</p>
+</footer>
+
+</body>
+</html>
